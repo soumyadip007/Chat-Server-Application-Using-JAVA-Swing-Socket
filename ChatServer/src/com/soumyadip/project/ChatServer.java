@@ -109,7 +109,18 @@ public class ChatServer extends JFrame {
 		btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-		
+				try {
+					
+					String msg="";
+					msg=textField_1.getText();
+					dout.writeUTF(msg);
+					textField_1.setText("");	
+						
+					} catch (IOException e1) {
+						
+						e1.printStackTrace();
+					}
+					
 			}
 		});
 		btnSend.setBounds(341, 555, 75, 59);
