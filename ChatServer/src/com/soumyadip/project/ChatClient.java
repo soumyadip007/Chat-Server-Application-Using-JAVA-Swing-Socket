@@ -18,7 +18,7 @@ public class ChatClient extends JFrame {
 	private JTextField textField_1;
 	private JButton btnSend;
 	private String main="";
-	JTextArea textArea;
+	public JTextArea textArea;
 //	private JScrollBar scrollBar;
 	private JPanel contentPane;
 
@@ -74,6 +74,8 @@ public class ChatClient extends JFrame {
 				action();
 			}
 		});
+		
+		
 		btnSend.setBounds(341, 555, 75, 59);
 		contentPane.add(btnSend);
 		textArea = new JTextArea();
