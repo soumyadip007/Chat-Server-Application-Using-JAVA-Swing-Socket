@@ -95,7 +95,6 @@ public class ChatServer extends JFrame {
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER)
 				{
-					action();
 				}
 			}
 			
@@ -107,7 +106,7 @@ public class ChatServer extends JFrame {
 		btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				action();
+		
 			}
 		});
 		btnSend.setBounds(341, 555, 75, 59);
@@ -118,19 +117,6 @@ public class ChatServer extends JFrame {
 		textArea.setBounds(0, 0, 396, 554);
 		contentPane.add(textArea);
 
-	}
-	
-	void action()
-	{
-		
-
-	}
-	
-
-	void ai(String s)
-	{
-		textArea.append(" AI->"+s+"\n\n");
-		textField_1.setText("");
 	}
 	
 }
