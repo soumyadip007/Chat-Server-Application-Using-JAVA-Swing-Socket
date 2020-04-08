@@ -30,7 +30,7 @@ public class ChatServer extends JFrame {
 			public void run() {
 				try {
 					ChatServer frame = new ChatServer();
-					frame.setTitle("Soumyadip Project");
+					frame.setTitle("Soumyadip Project-Server");
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
