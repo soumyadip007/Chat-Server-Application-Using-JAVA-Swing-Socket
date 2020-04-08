@@ -30,7 +30,7 @@ public class ChatClient extends JFrame {
 			public void run() {
 				try {
 					ChatClient frame = new ChatClient();
-					frame.setTitle("Soumyadip Project");
+					frame.setTitle("Soumyadip Project-Client");
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
