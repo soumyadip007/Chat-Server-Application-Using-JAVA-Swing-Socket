@@ -46,6 +46,12 @@ public class ChatServer extends JFrame {
 				}
 			}
 		});
+		
+		
+		
+		
+		String msgin="";
+		
 	}
 
 	/**
