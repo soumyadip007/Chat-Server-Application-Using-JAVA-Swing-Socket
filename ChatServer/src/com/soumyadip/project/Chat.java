@@ -19,7 +19,7 @@ public class Chat extends JFrame {
 	private JButton btnSend;
 	private String main="";
 	JTextArea textArea;
-	private JScrollBar scrollBar;
+//	private JScrollBar scrollBar;
 	private JPanel contentPane;
 
 	/**
@@ -30,6 +30,7 @@ public class Chat extends JFrame {
 			public void run() {
 				try {
 					Chat frame = new Chat();
+					frame.setTitle("Soumyadip Project");
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
