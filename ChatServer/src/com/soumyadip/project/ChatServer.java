@@ -14,7 +14,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class Chat extends JFrame {
+public class ChatServer extends JFrame {
 	private JTextField textField_1;
 	private JButton btnSend;
 	private String main="";
@@ -29,7 +29,7 @@ public class Chat extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Chat frame = new Chat();
+					ChatServer frame = new ChatServer();
 					frame.setTitle("Soumyadip Project");
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -42,7 +42,7 @@ public class Chat extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Chat() {
+	public ChatServer() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
