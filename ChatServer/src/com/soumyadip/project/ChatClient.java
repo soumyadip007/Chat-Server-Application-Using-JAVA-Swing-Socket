@@ -6,6 +6,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Random;
@@ -47,6 +48,33 @@ public class ChatClient extends JFrame {
 				}
 			}
 		});
+		
+		
+		
+	
+		
+		try {
+			String msgin="";
+//			ss=new ServerSocket(1201);
+//			s=ss.accept();
+			
+			
+			dis=new DataInputStream(s.getInputStream());
+			dout=new DataOutputStream(s.getOutputStream());
+			
+			while(!msgin.equals("exit")) {
+				msgin=dis.readUTF();
+				
+				textArea.setText(textArea.getText()+"\n"+msgin);
+				
+			}
+			
+			
+		} catch (IOException e) {
+			
+			
+			e.printStackTrace();
+		}
 	}
 
 	/**
