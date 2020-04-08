@@ -1,4 +1,5 @@
-package com.soumyadip.project;import java.awt.EventQueue;
+package com.soumyadip.project;
+import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,9 +27,7 @@ public class ChatClient extends JFrame {
 	public static JTextArea textArea;
 	private JPanel contentPane;
 
-	
-	
-	static ServerSocket ss;
+
 	static Socket s;
 	static DataInputStream dis;
 	static DataOutputStream dout;
@@ -57,7 +56,7 @@ public class ChatClient extends JFrame {
 			String msgin="";
 //			ss=new ServerSocket(1201);
 //			s=ss.accept();
-			
+			s=new Socket("120.0.0.1",1201);
 			
 			dis=new DataInputStream(s.getInputStream());
 			dout=new DataOutputStream(s.getOutputStream());
@@ -97,7 +96,7 @@ public class ChatClient extends JFrame {
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyCode()==KeyEvent.VK_ENTER)
 				{
-					action();
+				
 				}
 			}
 			
@@ -106,14 +105,24 @@ public class ChatClient extends JFrame {
 		textField_1.setBounds(0, 555, 338, 60);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
+		
 		btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				action();
+				try {
+					
+					String msg="";
+					msg=textField_1.getText();
+					dout.writeUTF(msg);
+					textField_1.setText("");	
+						
+					} catch (IOException e1) {
+						
+						e1.printStackTrace();
+					}
+					
 			}
 		});
-		
-		
 		btnSend.setBounds(341, 555, 75, 59);
 		contentPane.add(btnSend);
 		textArea = new JTextArea();
@@ -121,20 +130,24 @@ public class ChatClient extends JFrame {
 		textArea.setEditable(false);
 		textArea.setBounds(0, 0, 396, 554);
 		contentPane.add(textArea);
-
+	
 	}
 	
-	void action()
-	{
+	
+	public void masg_sendActionPerformed(java.awt.event.ActionEvent evt) {
 		
-
-	}
-	
-
-	void ai(String s)
-	{
-		textArea.append(" AI->"+s+"\n\n");
-		textField_1.setText("");
+		try {
+		
+		String msg="";
+		msg=textField_1.getText();
+		dout.writeUTF(msg);
+		textField_1.setText("");	
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
 	}
 	
 }
