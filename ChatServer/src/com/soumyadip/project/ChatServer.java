@@ -6,6 +6,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -50,7 +51,20 @@ public class ChatServer extends JFrame {
 		
 		
 		
-		String msgin="";
+		
+		try {
+			String msgin="";
+			ss=new ServerSocket(1201);
+			s=ss.accept();
+			dis=new DataInputStream(s.getInputStream());
+			
+			
+		} catch (IOException e) {
+			
+			
+			e.printStackTrace();
+		}
+		
 		
 	}
 
