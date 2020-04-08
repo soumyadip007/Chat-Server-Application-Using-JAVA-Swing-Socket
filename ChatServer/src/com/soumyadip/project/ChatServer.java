@@ -119,8 +119,7 @@ public class ChatServer extends JFrame {
 		textArea.setEditable(false);
 		textArea.setBounds(0, 0, 396, 554);
 		contentPane.add(textArea);
-	//	textArea.setTe
-
+	
 	}
 	
 	
@@ -134,7 +133,7 @@ public class ChatServer extends JFrame {
 		textField_1.setText("");	
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
