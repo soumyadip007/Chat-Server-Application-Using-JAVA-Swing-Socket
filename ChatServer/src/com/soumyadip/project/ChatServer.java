@@ -18,10 +18,10 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class ChatServer extends JFrame {
-	public JTextField textField_1;
+	public static JTextField textField_1;
 	public JButton btnSend;
 	public String main="";
-	public JTextArea textArea;
+	public static JTextArea textArea;
 //	private JScrollBar scrollBar;
 	
 	static ServerSocket ss;
@@ -62,6 +62,7 @@ public class ChatServer extends JFrame {
 			while(!msgin.equals("exit")) {
 				msgin=dis.readUTF();
 				
+				textArea.setText(textArea.getText()+"\n"+msgin);
 				
 			}
 			
@@ -103,6 +104,8 @@ public class ChatServer extends JFrame {
 		textField_1.setBounds(0, 555, 338, 60);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
+		
+		
 		btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -116,6 +119,7 @@ public class ChatServer extends JFrame {
 		textArea.setEditable(false);
 		textArea.setBounds(0, 0, 396, 554);
 		contentPane.add(textArea);
+	//	textArea.setTe
 
 	}
 	
