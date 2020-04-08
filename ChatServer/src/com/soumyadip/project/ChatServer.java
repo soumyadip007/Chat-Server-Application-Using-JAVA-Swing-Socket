@@ -4,12 +4,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Random;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -20,6 +22,13 @@ public class ChatServer extends JFrame {
 	private String main="";
 	JTextArea textArea;
 //	private JScrollBar scrollBar;
+	
+	static ServerSocket ss;
+	static Socket s;
+	static DataInputStream dis;
+	static DataOutputStream dout;
+	
+	
 	private JPanel contentPane;
 
 	/**
