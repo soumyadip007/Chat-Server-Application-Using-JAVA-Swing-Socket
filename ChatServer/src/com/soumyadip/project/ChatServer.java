@@ -57,6 +57,11 @@ public class ChatServer extends JFrame {
 			ss=new ServerSocket(1201);
 			s=ss.accept();
 			dis=new DataInputStream(s.getInputStream());
+			dout=new DataOutputStream(s.getOutputStream());
+			
+			while(!msgin.equals("exit")) {
+				msgin=dis.readUTF();
+			}
 			
 			
 		} catch (IOException e) {
