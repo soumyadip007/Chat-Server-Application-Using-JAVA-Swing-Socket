@@ -4,6 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Random;
 
 import javax.swing.JButton;
@@ -15,13 +19,19 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class ChatClient extends JFrame {
-	private JTextField textField_1;
-	private JButton btnSend;
-	private String main="";
-	public JTextArea textArea;
-//	private JScrollBar scrollBar;
+	public static JTextField textField_1;
+	public JButton btnSend;
+	public String main="";
+	public static JTextArea textArea;
 	private JPanel contentPane;
 
+	
+	
+	static ServerSocket ss;
+	static Socket s;
+	static DataInputStream dis;
+	static DataOutputStream dout;
+	
 	/**
 	 * Launch the application.
 	 */
