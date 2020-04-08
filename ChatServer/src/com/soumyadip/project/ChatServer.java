@@ -18,10 +18,10 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class ChatServer extends JFrame {
-	private JTextField textField_1;
-	private JButton btnSend;
-	private String main="";
-	JTextArea textArea;
+	public JTextField textField_1;
+	public JButton btnSend;
+	public String main="";
+	public JTextArea textArea;
 //	private JScrollBar scrollBar;
 	
 	static ServerSocket ss;
