@@ -61,7 +61,7 @@ public class ChatServer extends JFrame {
 			
 			while(!msgin.equals("exit")) {
 				msgin=dis.readUTF();
-				 
+				
 				
 			}
 			
