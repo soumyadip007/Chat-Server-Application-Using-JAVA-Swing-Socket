@@ -123,4 +123,21 @@ public class ChatServer extends JFrame {
 
 	}
 	
+	
+	public void masg_sendActionPerformed(java.awt.event.ActionEvent evt) {
+		
+		try {
+		
+		String msg="";
+		msg=textField_1.getText();
+		dout.writeUTF(msg);
+		textField_1.setText("");	
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 }
