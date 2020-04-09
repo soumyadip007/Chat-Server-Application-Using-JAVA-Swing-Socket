@@ -35,6 +35,7 @@ public class ClientEnd {
 				try {
 					ClientEnd window = new ClientEnd();
 					window.frame.setVisible(true);
+				
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
