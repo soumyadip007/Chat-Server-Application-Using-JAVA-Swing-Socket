@@ -1,4 +1,4 @@
-package chat;
+package chat.soumyadip.project;
 
 import java.awt.EventQueue;
 
@@ -19,26 +19,21 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 
-public class ChatClient {
+public class ClientEnd {
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField textField;
     private static JTextArea textArea;
     private static Socket con;
     DataInputStream input;
     DataOutputStream output;
     private JScrollPane scrollPane;
-    
-	/**
-	 * Launch the application.
-	 * @throws IOException 
-	 * @throws UnknownHostException 
-	 */
+  
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ChatClient window = new ChatClient();
+					ClientEnd window = new ClientEnd();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -46,7 +41,7 @@ public class ChatClient {
 			}
 		});
 		
-		con = new Socket("127.0.0.1", 1201);
+		con = new Socket("127.0.0.1", 8080);
 		 while (true) {
 			try {
 				
@@ -60,7 +55,6 @@ public class ChatClient {
 						Thread.sleep(2000);
 						System.exit(0);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 			}
@@ -71,16 +65,11 @@ public class ChatClient {
 		
 	}
 
-	/**
-	 * Create the application.
-	 */
-	public ChatClient() {
+	
+	public ClientEnd() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(UIManager.getColor("MenuBar.highlight"));
@@ -113,7 +102,6 @@ public class ChatClient {
 							Thread.sleep(2000);
 							System.exit(0);
 						} catch (InterruptedException e2) {
-							// TODO Auto-generated catch block
 							e2.printStackTrace();
 						}
 
