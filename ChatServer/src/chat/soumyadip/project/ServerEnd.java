@@ -1,27 +1,25 @@
-package chat;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
+package chat.soumyadip.project;
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.TextArea;
-import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.awt.event.ActionEvent;
-import javax.swing.UIManager;
-import javax.swing.JScrollPane;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
 
-public class ChatServer {
+public class ServerEnd {
 
 	private JFrame frmServerChat;
 	private JTextField textField;
@@ -34,17 +32,11 @@ public class ChatServer {
 	private static JLabel lblNewLabel;
 
 	
-	
-	
-	/**
-	 * Launch the application.
-	 * @throws IOException 
-	 */
 	public static void main(String[] args) throws IOException   {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ChatServer window = new ChatServer();
+					ServerEnd window = new ServerEnd();
 					window.frmServerChat.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +50,7 @@ public class ChatServer {
 	}
 
 	private static void serverConnection() throws IOException {
-		server = new ServerSocket(1201);
+		server = new ServerSocket(8080);
 		
 		 con = server.accept();
 		 lblNewLabel_2.setText("Client found !");
@@ -84,28 +76,19 @@ public class ChatServer {
 		}
 	}
 
-	/**
-	 * Create the application.
-	 * @throws IOException 
-	 */
-	public ChatServer() throws IOException {
+	public ServerEnd() throws IOException {
 		initialize();
 
 
 		 
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 * @throws IOException 
-	 */
 	private void initialize() throws IOException {
 		frmServerChat = new JFrame();
 		frmServerChat.getContentPane().setBackground(UIManager.getColor("MenuBar.highlight"));
 		frmServerChat.setForeground(Color.WHITE);
 		frmServerChat.setBackground(Color.WHITE);
 		frmServerChat.setTitle("Server Chat");
-	//	frmServerChat.setIconImage(Toolkit.getDefaultToolkit().getImage("/home/muhammed/Desktop/icon/Java.png"));
 		frmServerChat.getContentPane().setForeground(Color.WHITE);
 		frmServerChat.setBounds(100, 100, 605, 403);
 		frmServerChat.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -186,11 +169,7 @@ public class ChatServer {
 		lblNewLabel_2.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblNewLabel_2.setBounds(22, 303, 128, 30);
 		frmServerChat.getContentPane().add(lblNewLabel_2);
-		 
-		 
-				
-			
-		
+	
 
 	}
 }
