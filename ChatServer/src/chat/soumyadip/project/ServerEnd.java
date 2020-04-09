@@ -88,7 +88,7 @@ public class ServerEnd {
 		frmServerChat.getContentPane().setBackground(UIManager.getColor("MenuBar.highlight"));
 		frmServerChat.setForeground(Color.WHITE);
 		frmServerChat.setBackground(Color.WHITE);
-		frmServerChat.setTitle("Server Chat");
+		frmServerChat.setTitle("Soumyadip Networking Project : Server Chat");
 		frmServerChat.getContentPane().setForeground(Color.WHITE);
 		frmServerChat.setBounds(100, 100, 605, 403);
 		frmServerChat.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
