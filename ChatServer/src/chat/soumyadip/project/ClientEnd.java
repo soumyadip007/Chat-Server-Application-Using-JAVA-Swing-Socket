@@ -77,6 +77,7 @@ public class ClientEnd {
 		frame.setBounds(100, 100, 605, 378);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setTitle("Soumyadip Networking Project : Client Chat");
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Lato Medium", Font.PLAIN, 22));
