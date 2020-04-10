@@ -30,3 +30,26 @@ Server Execution: At server the side, a thread is created which receives numerou
 
 
 Client Execution: A client firstly must have to register itself by sending username to the server and then any of two registered clients can communicate with each other. 
+
+# DEFINITION OF TERMS 
+
+Socket: Socket is a standard connection protocol that supports data communication over the security network between connected terminals. The standard connection supports the data transmission both by the TCP and UDP protocols between the terminals. 
+
+TCP: TCP is a transport layer protocol used by applications that require guaranteed delivery of data. Basically, it is a connection oriented protocol. To communicate over TCP one must first have to establish a connection between pair of sockets, where one socket is client and the other belongs to server. After the connection is established between them then they can communicate with each other. 
+
+Client: A client is a system that accesses or desires for a service made accessible by a server. 
+
+Server: A server is a system (hardware or software) program running to provide the service requests of other system programs. 
+
+Port: Port is a software mechanism that allows the centralized connected Servers to listen for requests made by clients. Port is actually purposed as a gateway to listen for the requested parameters by the server terminals or other machines. It is a software address on a system that is on the security network. Entire request response proceeding among this Application is carries through machine ports. 
+
+Security network: This refers to a system were computers are linked to share software, data, hardware and resources for the benefit of users. 
+
+Interface: This may be software or hardware that upon an agreed method spells out the manner a system component can exchange information with another system component. 
+
+Secure socket layer (SSL): This refers to Secure Sockets Layer protocol that is used for encryption of data for secure data transmission. 
+
+IP: This refers to Internet Protocol; it is the reasonable security network address of device on a security network. It is notational called dotted-decimal (for instance: 127.0.0.1). 
+
+
+SWING (GUI Component): Swing is a GUI widget toolkit for Java. It is part of Oracle's Java Foundation Classes – an API for providing a graphical user interface for Java programs. Swing was developed to provide a more sophisticated set of GUI components than the earlier Abstract Window Toolkit.
