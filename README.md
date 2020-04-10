@@ -56,12 +56,12 @@ SWING (GUI Component): Swing is a GUI widget toolkit for Java. It is part of Ora
 
 
 # Output
-<img src="./img/1.png" >
-<img src="./img/2.png" >
-				<img src="./img/3.png" >
-				<img src="./img/4.png" >
-				<img src="./img/5.png" >
-				<img src="./img/6.png" >
-				<img src="./img/7.png" >
-				<img src="./img/8.png" >
-				<img src="./img/9.png" >
+
+<img src="./ChatServer/img/1.png" >
+<img src="./ChatServer/img/2.png" >
+				<img src="./ChatServer/img/3.png" >
+				<img src="./ChatServer/img/4.png" >
+				<img src="./ChatServer/img/5.png" >
+				<img src="./ChatServer/img/6.png" >
+				<img src="./ChatServer/img/7.png" >
+				<img src="./ChatServer/img/8.png" >
